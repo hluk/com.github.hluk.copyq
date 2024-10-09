@@ -1,7 +1,7 @@
 ---
 app-id: com.github.hluk.copyq
 runtime: org.kde.Platform
-runtime-version: 5.15-23.08
+runtime-version: 6.7
 sdk: org.kde.Sdk
 command: copyq
 
@@ -21,6 +21,8 @@ modules:
       # The flatpak app should not handle autostart itself:
       # https://github.com/flathub/flatpak-builder-lint/issues/87
       - -DCOPYQ_AUTOSTART=OFF
+      - -DCOPYQ_AUTOSTART_COMMAND=flatpak run com.github.hluk.copyq
+      - -DWITH_QT6=1
     name: copyq
     sources:
       - commit: dc155ef9a5635a1e02e09205cf00339eee0b0f6d
