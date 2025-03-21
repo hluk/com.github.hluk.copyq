@@ -5,8 +5,8 @@ sdk: org.kde.Sdk
 command: copyq
 
 finish-args:
+  - --socket=x11
   - --socket=wayland
-  - --socket=fallback-x11
   - --socket=gpg-agent
   - --talk-name=org.kde.StatusNotifierWatcher
   - --share=ipc
